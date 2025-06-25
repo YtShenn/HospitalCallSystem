@@ -1,0 +1,245 @@
+ /* 设置网页的背景颜色为浅灰色 */
+ body {
+    background-color: #c5e6fb;
+}
+
+.title-name{
+    box-shadow: 0 7px 5px -5px #636363;
+    font-size:x-large;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center; 
+    font-weight:1000;
+    color: #ffffff;
+    background-color: #8ca3bb;
+    height:48px;
+    margin-bottom: 3px;
+    margin-left: 1.5%;
+    margin-right: 2%;
+    padding-top: 5px;
+    border-radius: 10px;  /* 左下角 */
+}
+
+/* 设置一个容器元素，用于包含左右两个子元素 */
+.container_total {
+    display: flex; /* 设置为flex布局 */
+    flex-direction: row; /* 设置子元素为水平排列 */
+    align-items: flex-start; /* 设置子元素在垂直方向上对齐顶部 */
+    width: 650px;
+}
+
+/*左边*/
+/* 设置左边的可滚动框的样式 */
+.scroll-box {
+    box-shadow: 2px 3px 4px #636363;
+    width: 520px;
+    height: 650px;
+    overflow-y: scroll;
+    border: 1px solid rgb(255, 255, 255);
+    border-bottom: 5px solid rgb(255, 255, 255);;
+    margin: 10px;
+    margin-top: 0px;
+    padding: 10px;
+    padding-top: 5px;
+    background-color: white;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border-bottom-left-radius: 10px;  /* 左下角 */
+    border-bottom-right-radius: 10px;
+}
+
+
+
+
+
+
+/*右边*/
+/* 设置右边的表格的样式 */
+.container_right {
+    width: 290px;
+    height: 600px;
+    /*border: 1px solid black;
+    margin: 10px;
+    padding: 10px;*/
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+/* 设置表格的边框和对齐方式 */
+table, th, td {
+    border: 1px solid rgb(177, 177, 177);
+    border-collapse: collapse;
+    text-align: center;
+}
+
+/* 设置按钮的样式 */
+button {
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-left: 0px; /* 设置左边距为10像素 */
+    margin-right: 0px; /* 设置右边距为10像素 */
+}
+/*两个按钮并列时的*/
+.button2 {
+    width: 50%;
+    height: 30px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-left: 10px; /* 设置左边距为10像素 */
+    margin-right: 10px; /* 设置右边距为10像素 */
+}
+
+
+/* 设置时间显示区域的样式 */
+#time {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+    align-items: center;
+}
+
+/* 设置文本区域的样式 */
+.text-area {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+/* 设置下拉列表的样式 */
+.select-list {
+    width: 50%;
+    height: 30px;
+    margin-bottom: 0px;
+    margin-left: 0px; /* 设置左边距为10像素 */
+    margin-right: 0px; /* 设置右边距为10像素 */
+}
+
+/* 设置文本输入框的样式 */
+.text-input_name {
+    width: 80%;
+    height: 30px;
+    margin-bottom: 10px;
+}
+.text-input_id {
+    width: 67.5%;
+    height: 30px;
+    margin-bottom: 10px;
+}
+input::-webkit-input-placeholder {
+    font-size: 12px;
+}
+
+/* 设置文本输出框的样式 */
+.text-output {
+    border: 3px solid #ffffff; /* 设置四个方向的边框都为2像素的实线，颜色为黑色 */
+    /*margin: 5px;*/
+    margin-top: 0px;
+    border-radius: 10px;
+    /*padding: 5px;*/
+    width: 250px;
+    height: 70px;
+    font-size: large;
+    color: #faa700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    
+}
+
+/* 设置一个容器元素，用于包含两个下拉选项框 */
+.container_select {
+    display: flex; /* 设置为flex布局 */
+    flex-direction: row; /* 设置子元素为水平排列 */
+    align-items: center; /* 设置子元素在垂直方向上居中对齐 */
+}
+
+/* 设置一个容器元素，用于包含两个按钮 */
+.container_button {
+    display: flex; /* 设置为flex布局 */
+    flex-direction: row; /* 设置子元素为水平排列 */
+    align-items: center; /* 设置子元素在垂直方向上居中对齐 */
+    background-color: white;
+}
+
+/* 将医生相关操作全部放入 */
+.container_doctor{
+    box-shadow:  0.1em 0.1em 0.5em  #636363;
+    border: 3px solid #489ff7; /* 设置四个方向的边框都为2像素的实线，颜色为黑色 */
+    margin: 5px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: white;  
+    border-radius: 20px;
+}
+/* 将患者相关操作全部放入 */
+.container_patient{
+    box-shadow: 0 7px 5px -5px #636363;
+    border: 3px solid #489ff7; /* 设置四个方向的边框都为2像素的实线，颜色为黑色 */
+    margin: 5px;
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: white;  
+    border-radius: 20px;
+}
+.container_call{
+    box-shadow: 0 7px 5px -5px #636363;
+    border: 3px solid #489ff7; /* 设置四个方向的边框都为2像素的实线，颜色为黑色 */
+    margin: 5px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: white;  
+    border-radius: 20px;
+}
+
+form{
+    border-width: 0px;
+}
+
+.btn-doc {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    background-color: #489ff7;
+}
+.btn-small{
+    background-color: #489ff7;
+    width: 50%;
+    height: 30px;
+    margin-bottom: 10px;
+    margin-left: 3px; /* 设置左边距为10像素 */
+    margin-right: 3px; /* 设置右边距为10像素 */
+    padding-top: 1px;
+}
+.btn-small:disabled{
+    background-color: #9fcfff;
+    border-color: #55a5f5;
+    width: 50%;
+    height: 30px;
+    margin-bottom: 10px;
+    margin-left: 3px; /* 设置左边距为10像素 */
+    margin-right: 3px; /* 设置右边距为10像素 */
+    padding-top: 1px;
+}
+/* 设置按钮的样式 */
+.btn-big {
+    background-color: #489ff7;
+    
+    height: 35px;
+}
+.tb1{    
+    height: 15px;
+    font-size: 10px;
+    border-color: #aeaeae; 
+    border-style:solid;
+    
+}

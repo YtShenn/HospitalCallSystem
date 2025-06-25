@@ -1,0 +1,831 @@
+<html>
+<head>    
+    
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="./css/mainwindow.css" />
+</head>
+<body>
+
+    <div  class="title-name">
+        <img src="./img/hospital2.png">        医院就诊叫号系统</div>
+    
+    <div class="container_total" type="text">
+        <br />
+        <!-- 创建一个左边的可滚动框 -->
+        <div class="container_left">
+            <div style="text-align: center; margin: 5px; margin-bottom: 0px; font-weight: bold; background-color: white;
+            width: 520px; margin: 10px;    margin-bottom: 0px; border-top-left-radius: 10px;  border-top-right-radius: 10px;
+            box-shadow: 0px -5px 5px -5px #636363;">
+                各科室信息</div>
+            <div class="scroll-box">
+                <!-- 创建16个按钮，每个按钮对应一个文本 -->
+                <button class="btn btn-primary btn-doc" onclick="toggle('1')">科室1</button>
+                <div id="1" style="display:none">
+                    <!-- 创建一个表格，显示文本A的信息 -->
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold; margin-bottom: 3px;">
+                        医生01，当前排队 <span id="x101">0</span> 人
+                    </div>
+                    <table  id="101" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                        
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold; margin-bottom: 3px;">
+                        医生02，当前排队 <span id="x102">0</span> 人
+                    </div>
+                    <table  id="102" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold;margin-bottom: 3px;">
+                        医生03，当前排队 <span id="x103">0</span> 人
+                    </div>
+                    <table  id="103" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- 其他15个按钮和表格类似，这里省略 -->
+                <button class="btn btn-primary btn-doc" onclick="toggle('2')">科室2</button>
+                <div id="2" style="display:none">
+                    <!-- 创建一个表格，显示文本A的信息 -->
+                    <div id="d1" style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold; margin-bottom: 3px;">
+                        医生01，当前排队 <span id="x201">0</span> 人
+                    </div>
+                    <table  id="201" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                        
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold; margin-bottom: 3px;">
+                        医生02，当前排队 <span id="x202">0</span> 人
+                    </div>
+                    <table  id="202" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold;margin-bottom: 3px;">
+                        医生03，当前排队 <span id="x203">0</span> 人
+                    </div>
+                    <table  id="203" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                </div>
+                
+                <button class="btn btn-primary btn-doc" onclick="toggle('3')">科室3</button>
+                <div id="3" style="display:none">
+                    <!-- 创建一个表格，显示文本A的信息 -->
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold; margin-bottom: 3px;">
+                        医生01，当前排队 <span id="x301">0</span> 人
+                    </div>
+                    <table  id="301" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                        
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold; margin-bottom: 3px;">
+                        医生02，当前排队 <span id="x302">0</span> 人
+                    </div>
+                    <table  id="302" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold;margin-bottom: 3px;">
+                        医生03，当前排队 <span id="x303">0</span> 人
+                    </div>
+                    <table  id="303" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                </div>
+
+                <button class="btn btn-primary btn-doc" onclick="toggle('4')">科室4</button>
+                <div id="4" style="display:none">
+                    <!-- 创建一个表格，显示文本A的信息 -->
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold; margin-bottom: 3px;">
+                        医生01，当前排队 <span id="x401">0</span> 人
+                    </div>
+                    <table  id="401" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                        
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold; margin-bottom: 3px;">
+                        医生02，当前排队 <span id="x402">0</span> 人
+                    </div>
+                    <table  id="402" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold;margin-bottom: 3px;">
+                        医生03，当前排队 <span id="x403">0</span> 人
+                    </div>
+                    <table  id="403" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                </div>
+
+                <button class="btn btn-primary btn-doc" onclick="toggle('5')">科室5</button>
+                <div id="5" style="display:none">
+                    <!-- 创建一个表格，显示文本A的信息 -->
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold; margin-bottom: 3px;">
+                        医生01，当前排队 <span id="x501">0</span> 人
+                    </div>
+                    <table  id="501" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                        
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold; margin-bottom: 3px;">
+                        医生02，当前排队 <span id="x502">0</span> 人
+                    </div>
+                    <table  id="502" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold;margin-bottom: 3px;">
+                        医生03，当前排队 <span id="x503">0</span> 人
+                    </div>
+                    <table  id="503" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                </div>
+
+                <button class="btn btn-primary btn-doc" onclick="toggle('6')">科室6</button>
+                <div id="6" style="display:none">
+                    <!-- 创建一个表格，显示文本A的信息 -->
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold; margin-bottom: 3px;">
+                        医生01，当前排队 <span id="x601">0</span> 人
+                    </div>
+                    <table  id="601" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+            
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold; margin-bottom: 3px;">
+                        医生02，当前排队 <span id="x602">0</span> 人
+                    </div>
+                    <table  id="602" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold;margin-bottom: 3px;">
+                        医生03，当前排队 <span id="x603">0</span> 人
+                    </div>
+                    <table  id="603" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                </div>
+            
+                <button class="btn btn-primary btn-doc" onclick="toggle('7')">科室7</button>
+                <div id="7" style="display:none">
+                    <!-- 创建一个表格，显示文本A的信息 -->
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold; margin-bottom: 3px;">
+                        医生01，当前排队 <span id="x701">0</span> 人
+                    </div>
+                    <table  id="701" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+            
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold; margin-bottom: 3px;">
+                        医生02，当前排队 <span id="x702">0</span> 人
+                    </div>
+                    <table  id="702" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold;margin-bottom: 3px;">
+                        医生03，当前排队 <span id="x703">0</span> 人
+                    </div>
+                    <table  id="703" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                </div>
+            
+                <button class="btn btn-primary btn-doc" onclick="toggle('8')">科室8</button>
+                <div id="8" style="display:none">
+                    <!-- 创建一个表格，显示文本A的信息 -->
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold; margin-bottom: 3px;">
+                        医生01，当前排队 <span id="x801">0</span> 人
+                    </div>
+                    <table  id="801" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+            
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold; margin-bottom: 3px;">
+                        医生02，当前排队 <span id="x802">0</span> 人
+                    </div>
+                    <table  id="802" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold;margin-bottom: 3px;">
+                        医生03，当前排队 <span id="x803">0</span> 人
+                    </div>
+                    <table  id="803" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                </div>
+            
+                <button class="btn btn-primary btn-doc" onclick="toggle('9')">科室9</button>
+                <div id="9" style="display:none">
+                    <!-- 创建一个表格，显示文本A的信息 -->
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold; margin-bottom: 3px;">
+                        医生01，当前排队 <span id="x901">0</span> 人
+                    </div>
+                    <table  id="901" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+            
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold; margin-bottom: 3px;">
+                        医生02，当前排队 <span id="x902">0</span> 人
+                    </div>
+                    <table  id="902" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold;margin-bottom: 3px;">
+                        医生03，当前排队 <span id="x903">0</span> 人
+                    </div>
+                    <table  id="903" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                </div>
+            
+                <button class="btn btn-primary btn-doc" onclick="toggle('10')">科室10</button>
+                <div id="10" style="display:none">
+                    <!-- 创建一个表格，显示文本A的信息 -->
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold; margin-bottom: 3px;">
+                        医生01，当前排队 <span id="x1001">0</span> 人
+                    </div>
+                    <table  id="1001" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+            
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold; margin-bottom: 3px;">
+                        医生02，当前排队 <span id="x1002">0</span> 人
+                    </div>
+                    <table  id="1002" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold;margin-bottom: 3px;">
+                        医生03，当前排队 <span id="x1003">0</span> 人
+                    </div>
+                    <table  id="1003" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                </div>
+            
+                <button class="btn btn-primary btn-doc" onclick="toggle('11')">科室11</button>
+                <div id="11" style="display:none">
+                    <!-- 创建一个表格，显示文本A的信息 -->
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold; margin-bottom: 3px;">
+                        医生01，当前排队 <span id="x1101">0</span> 人
+                    </div>
+                    <table  id="1101" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+            
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold; margin-bottom: 3px;">
+                        医生02，当前排队 <span id="x1102">0</span> 人
+                    </div>
+                    <table  id="1102" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold;margin-bottom: 3px;">
+                        医生03，当前排队 <span id="x1103">0</span> 人
+                    </div>
+                    <table  id="1103" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                </div>
+            
+                <button class="btn btn-primary btn-doc" onclick="toggle('12')">科室12</button>
+                <div id="12" style="display:none">
+                    <!-- 创建一个表格，显示文本A的信息 -->
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold; margin-bottom: 3px;">
+                        医生01，当前排队 <span id="x1201">0</span> 人
+                    </div>
+                    <table  id="1201" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+            
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold; margin-bottom: 3px;">
+                        医生02，当前排队 <span id="x1202">0</span> 人
+                    </div>
+                    <table  id="1202" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold;margin-bottom: 3px;">
+                        医生03，当前排队 <span id="x1203">0</span> 人
+                    </div>
+                    <table  id="1203" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                </div>
+            
+                <button class="btn btn-primary btn-doc" onclick="toggle('13')">科室13</button>
+                <div id="13" style="display:none">
+                    <!-- 创建一个表格，显示文本A的信息 -->
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold; margin-bottom: 3px;">
+                        医生01，当前排队 <span id="x1301">0</span> 人
+                    </div>
+                    <table  id="1301" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+            
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold; margin-bottom: 3px;">
+                        医生02，当前排队 <span id="x1302">0</span> 人
+                    </div>
+                    <table  id="1302" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold;margin-bottom: 3px;">
+                        医生03，当前排队 <span id="x1303">0</span> 人
+                    </div>
+                    <table  id="1303" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                </div>
+            
+                <button class="btn btn-primary btn-doc" onclick="toggle('14')">科室14</button>
+                <div id="14" style="display:none">
+                    <!-- 创建一个表格，显示文本A的信息 -->
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold; margin-bottom: 3px;">
+                        医生01，当前排队 <span id="x1401">0</span> 人
+                    </div>
+                    <table  id="1401" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+            
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold; margin-bottom: 3px;">
+                        医生02，当前排队 <span id="x1402">0</span> 人
+                    </div>
+                    <table  id="1402" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold;margin-bottom: 3px;">
+                        医生03，当前排队 <span id="x1403">0</span> 人
+                    </div>
+                    <table  id="1403" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                </div>
+            
+                <button class="btn btn-primary btn-doc" onclick="toggle('15')">科室15</button>
+                <div id="15" style="display:none">
+                    <!-- 创建一个表格，显示文本A的信息 -->
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold; margin-bottom: 3px;">
+                        医生01，当前排队 <span id="x1501">0</span> 人
+                    </div>
+                    <table  id="1501" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+            
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold; margin-bottom: 3px;">
+                        医生02，当前排队 <span id="x1502">0</span> 人
+                    </div>
+                    <table  id="1502" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold;margin-bottom: 3px;">
+                        医生03，当前排队 <span id="x1503">0</span> 人
+                    </div>
+                    <table  id="1503" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>挂号时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                </div>
+
+                <button class="btn btn-primary btn-doc" onclick="toggle('B')">B超室</button>
+                <div id="B" style="display:none">
+                    <!-- 创建一个表格，显示文本A的信息 -->
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold;">
+                        机器01，当前排队 <span id="xB01">0</span> 人
+                    </div>
+                    <table  id="B01" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>开始时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                        
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold;">
+                        机器02，当前排队 <span id="xB02">0</span> 人
+                    </div>
+                    <table  id="B02" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>开始时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                    <div style="text-align: center; margin: 0px; font-size: 13px; font-weight: bold;">
+                        机器03，当前排队 <span id="xB03">0</span> 人
+                    </div>
+                    <table  id="B03" class="table table-striped tb1" style="display:none">
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>证件号</th>
+                            <th>开始时间</th>
+                            <th>就诊状态</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- 创建右边 -->
+        <div class="container_right">
+            <!-- 创建一个右上角的时间显示区域 -->
+            <div id="time" style="text-align: center"></div>
+
+            <!-- 创建一个文本输出提示框 -->
+            <div class="container_call">
+                <div style="text-align: center; margin: 5px; margin-bottom: 0px; font-weight: bold;">叫号窗口</div>
+                <textarea readonly id="output" class="text-output" rows="3" cols="32"></textarea>
+            </div>
+
+            <!-- 医生区域 -->
+            <div class="container_doctor">
+                <div style="text-align: center; margin: 10px; font-weight: bold;">医生操作区</div>
+
+                <!-- 创建两个下拉列表 -->
+                <form action="">
+                    请选择科室：
+                    <select class="select-list" id="doctor-department">
+                        <option value="1">科室1</option>
+                        <option value="2">科室2</option>
+                        <option value="3">科室3</option>
+                        <option value="4">科室4</option>
+                        <option value="5">科室5</option>
+                        <option value="6">科室6</option>
+                        <option value="7">科室7</option>
+                        <option value="8">科室8</option>
+                        <option value="9">科室9</option>
+                        <option value="10">科室10</option>
+                        <option value="11">科室11</option>
+                        <option value="12">科室12</option>
+                        <option value="13">科室13</option>
+                        <option value="14">科室14</option>
+                        <option value="15">科室15</option>
+                        <option value="B">B超室</option>
+                    </select>
+                </form>
+                <form action="">
+                    请选择编号：
+                    <select class="select-list" id="doctor-id">
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                    </select>
+                </form>
+
+                <!-- 创建两个横向并列的按钮 -->
+                <div class="container_button">
+                    <button class="btn btn-primary btn-small" id="doc-start">开始就诊</button>                    
+                    <button class="btn btn-primary btn-small" id="doc-end">结束就诊</button>
+                </div>
+
+                <!-- 创建一个独立的按钮 -->
+                <button id="record" class="btn btn-primary btn-big" style="text-align: center">查看就诊记录</button>
+            </div>
+            
+            
+            
+            <!-- 患者区域 -->
+            <div class="container_patient">         
+                <div style="text-align: center; margin: 10px; font-weight: bold;">患者操作区</div>
+
+                <!-- 创建四个垂直排列的文本输入框 -->
+                <form name="input" action="html_form_action.php" method="get">
+                    姓名: <input type="text" id="name-input" name="user" class="text-input_name" placeholder="name"><br>
+                    身份证号: <input type="text" id="id-input" name="id" class="text-input_id" placeholder="为日志排版美观输入不超7位">
+                </form>
+                <form action="">
+                    请选择科室：
+                    <select class="select-list" id="department-select">
+                        <option value="1">科室1</option>
+                        <option value="2">科室2</option>
+                        <option value="3">科室3</option>
+                        <option value="4">科室4</option>
+                        <option value="5">科室5</option>
+                        <option value="6">科室6</option>
+                        <option value="7">科室7</option>
+                        <option value="8">科室8</option>
+                        <option value="9">科室9</option>
+                        <option value="10">科室10</option>
+                        <option value="11">科室11</option>
+                        <option value="12">科室12</option>
+                        <option value="13">科室13</option>
+                        <option value="14">科室14</option>
+                        <option value="15">科室15</option>
+                    </select>
+                </form>
+                <form action="">
+                    请选择医生：
+                    <select class="select-list" id="doctor-select">
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                    </select>
+                </form>
+
+                <!-- 创建一个按钮 -->
+                <button class="btn btn-primary btn-big" id="submit-button" >挂号</button>
+        
+            </div>
+            
+            
+        </div>
+        
+    </div>
+
+    
+    <!-- 使用JavaScript实现一些功能 -->
+    <script>
+        // 定义一个函数，用于切换按钮对应的表格的显示和隐藏
+        function toggle(id) {
+            // 获取按钮对应的表格元素
+            var element = document.getElementById(id);
+            
+            // 判断表格元素是否可见
+            if (element.style.display == "none") {
+                // 如果不可见，就设置为可见
+                element.style.display = "block";
+            } else {
+                // 如果可见，就设置为不可见
+                element.style.display = "none";
+            }
+        }
+    </script>
+    
+    <script> if (typeof module === 'object'){window.module = module; module  = undefined;}</script>      
+    <script src="./node_modules/jquery/dist/jquery.min.js">    </script>  
+    <script src="./js/time.js"></script>
+    <script src="./js/patient.js"></script>  
+    <script src="./js/doctor.js"></script>
+    <script> if (window.module) module = window.moudle;</script> 
+</body>
+</html>

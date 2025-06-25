@@ -1,0 +1,21 @@
+{
+  "name": "HospitalCallSystem",
+  "version": "1.0.0",
+  "description": "An electron based Hospital Call System",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "electron .",
+    "package": "electron-packager . hospitalCallSystem --platform=win32 --arch=x64 --out=./out --asar --app-version=0.0.1 --overwrite --icon=logo.ico"
+  },
+  "author": "syt",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^26.1.0"
+  },
+  "dependencies": {
+    "@electron/remote": "^2.0.11",
+    "bootstrap": "^5.3.1",
+    "jquery": "^3.7.1"
+  }
+}

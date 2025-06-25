@@ -1,0 +1,64 @@
+body {
+    width: 310px;
+    height: 230px;
+    background-image: url('../img/bg.jpg');
+    background-size: cover; /* 按比例缩放图片以填充整个窗口 */
+    background-repeat: no-repeat; /* 不重复显示图片 */
+    background-attachment: fixed;
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+
+.container {
+    width: 300px; /* 设置容器的宽度 */
+    margin-left:50px; /* 设置容器居中显示 */
+    margin-top: 100px;
+}
+.title-bar {
+    text-align: center; /* 设置标题居中对齐 */
+    margin-top: 40px; /* 设置标题距离上边界的距离 */
+    margin-left:10px; 
+    font-size: 25px; /* 设置标题的字体大小 */
+    font-family:'Source Han Sans CN';
+    font-weight: bolder;
+    color:white;
+}
+.text {
+    text-align: center; /* 设置文字区域居中对齐 */
+    margin-top: 20px; /* 设置文字区域距离标题的距离 */
+    font-size: 24px; /* 设置文字区域的字体大小 */
+}
+.button-group {
+    display: flex; /* 设置按钮组为flex布局 */
+    flex-direction: column; /* 设置按钮组为垂直排列 */
+    align-items: flex-start; /* 设置按钮组靠左对齐 */
+   /* margin-top: 50px;
+    margin-left: 10px;*/
+    top: 53%;
+    left: 13%;
+    position:fixed;
+    height: 100px;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+.btn-enter{
+    box-shadow: 0 7px 5px -5px #845800;
+    background-color: #faa700;
+    border-color: #e39000;
+    width: 110px;
+    height: 30px;
+    margin-bottom: 20px;
+    margin-left: 3px; /* 设置左边距为10像素 */
+    margin-right: 3px; /* 设置右边距为10像素 */
+    padding-top: 1px;
+}
+.btn-exit{
+    box-shadow: 0 7px 5px -5px #845800;
+    background-color: #faa700;
+    border-color: #e39000;
+    width: 110px;
+    height: 30px;
+    margin-left: 3px; /* 设置左边距为10像素 */
+    margin-right: 3px; /* 设置右边距为10像素 */
+    padding-top: 1px;
+}
